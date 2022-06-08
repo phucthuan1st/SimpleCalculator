@@ -28,7 +28,6 @@ class ViewController : UIViewController
     func addContent(value: String) {
         calcContent = calcContent + value
         calcArea.text = calcContent
-        print(calcContent)
     }
     
     func clearLast() {
@@ -36,87 +35,89 @@ class ViewController : UIViewController
         calcArea.text = calcContent
     }
     
-    @IBAction func tapZero(_ sender: Any) {
+    @IBAction func tapZero(_sender: Any) {
         addContent(value: "0")
     }
     
-    @IBAction func tapDot(_ sender: Any) {
+    @IBAction func tapDot(_sender: Any) {
         addContent(value: ".")
     }
     
-    @IBAction func tapEquals(_ sender: Any) {
+    @IBAction func tapEquals(_sender: Any) {
         //show value
-        let expression = NSExpression(format: calcContent)
+        let resultExpression = calcContent.replacingOccurrences(of: "%", with: "*0.01")
+        let expression = NSExpression(format: resultExpression)
         let result = expression.expressionValue(with: nil, context: nil) as! Double
         
         let resultString:String = String(format: "%f", result)
         
         calcResult.text = resultString
+        
     }
     
-    @IBAction func tapOne(_ sender: Any) {
+    @IBAction func tapOne(_sender: Any) {
         addContent(value: "1")
     }
     
-    @IBAction func tapTwo(_ sender: Any) {
+    @IBAction func tapTwo(_sender: Any) {
         addContent(value: "2")
     }
     
-    @IBAction func tapThree(_ sender: Any) {
+    @IBAction func tapThree(_sender: Any) {
         addContent(value: "3")
     }
     
-    @IBAction func tapPlus(_ sender: Any) {
+    @IBAction func tapPlus(_sender: Any) {
         addContent(value: "+")
     }
     
-    @IBAction func tapFour(_ sender: Any) {
+    @IBAction func tapFour(_sender: Any) {
         addContent(value: "4")
     }
     
-    @IBAction func tapFive(_ sender: Any) {
+    @IBAction func tapFive(_sender: Any) {
         addContent(value: "5")
     }
     
-    @IBAction func tapSix(_ sender: Any) {
+    @IBAction func tapSix(_sender: Any) {
         addContent(value: "6")
     }
     
-    @IBAction func tapMinus(_ sender: Any) {
+    @IBAction func tapMinus(_sender: Any) {
         addContent(value: "-")
     }
     
-    @IBAction func tapSeven(_ sender: Any) {
+    @IBAction func tapSeven(_sender: Any) {
         addContent(value: "7")
     }
     
-    @IBAction func tapEight(_ sender: Any) {
+    @IBAction func tapEight(_sender: Any) {
         addContent(value: "8")
     }
     
-    @IBAction func tapNine(_ sender: Any) {
+    @IBAction func tapNine(_sender: Any) {
         addContent(value: "9")
     }
     
-    @IBAction func tapMutiply(_ sender: Any) {
+    @IBAction func tapMutiply(_sender: Any) {
         addContent(value: "*")
     }
     
-    @IBAction func tapAC(_ sender: Any) {
+    @IBAction func tapAC(_sender: Any) {
         clearAll()
     }
     
-    @IBAction func tapC(_ sender: Any) {
+    @IBAction func tapC(_sender: Any) {
         if (!calcContent.isEmpty) {
             clearLast()
         }
     }
     
-    @IBAction func tapPercents(_ sender: Any) {
+    @IBAction func tapPercents(_sender: Any) {
         addContent(value: "%")
     }
     
-    @IBAction func tapDivide(_ sender: Any) {
+    @IBAction func tapDivide(_sender: Any) {
         addContent(value: "/")
     }
     

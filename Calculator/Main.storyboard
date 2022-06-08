@@ -19,17 +19,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-fO-tRf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="204.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2c-Ho-9Iv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2c-Ho-9Iv">
                                         <rect key="frame" x="8" y="35" width="398" height="58"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" metaFont="system" size="30"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZC-Xy-eIL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZC-Xy-eIL">
                                         <rect key="frame" x="8" y="115" width="398" height="58"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" metaFont="system" size="30"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +73,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapAC:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="Czm-C9-8jX"/>
+                                                    <action selector="tapACWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="shF-Sx-AIK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8v-0t-KL2">
@@ -71,7 +85,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapC:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="Tzz-S4-XcC"/>
+                                                    <action selector="tapCWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wkv-1Q-JXb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G0-rR-M2T">
@@ -83,7 +97,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapPercents:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="4nw-Bs-X18"/>
+                                                    <action selector="tapPercentsWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c9k-jd-tL4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-aS-es8">
@@ -95,7 +109,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapDivide:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="uLM-Jg-LXP"/>
+                                                    <action selector="tapDivideWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="49m-1H-cxN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -113,7 +127,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapSeven:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="7bH-X2-4mp"/>
+                                                    <action selector="tapSevenWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WVt-7z-3oT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-ae-GOi">
@@ -125,7 +139,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapEight:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="fDg-dI-Zza"/>
+                                                    <action selector="tapEightWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oRq-EG-4s1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB1-RL-q6Z">
@@ -137,7 +151,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapNine:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="kzX-zA-OSX"/>
+                                                    <action selector="tapNineWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gIA-hz-iKE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-uE-PcB">
@@ -149,7 +163,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapMutiply:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="kfi-De-bfW"/>
+                                                    <action selector="tapMutiplyWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="acu-Pm-Abg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -167,7 +181,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapFour:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="Kjb-ta-B6J"/>
+                                                    <action selector="tapFourWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mMF-go-dEt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDi-2r-kAe">
@@ -179,7 +193,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapFive:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="fyO-4T-EgT"/>
+                                                    <action selector="tapFiveWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RWW-oz-Abt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eD-E9-6lV">
@@ -191,7 +205,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapSix:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="mwS-fh-ssy"/>
+                                                    <action selector="tapSixWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ygM-dK-ZSN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y40-ka-tnf">
@@ -203,7 +217,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapMinus:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="vMh-ep-3C4"/>
+                                                    <action selector="tapMinusWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="76t-jL-h1d"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -221,7 +235,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapOne:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="ary-8B-L83"/>
+                                                    <action selector="tapOneWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oYw-FH-v1e"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-vn-CbG">
@@ -233,7 +247,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapTwo:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="Ech-J8-4dr"/>
+                                                    <action selector="tapTwoWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rwi-BL-08I"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-0w-rQd">
@@ -245,7 +259,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapThree:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="yUx-4k-y8Y"/>
+                                                    <action selector="tapThreeWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="I03-gN-DMA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-lC-Qd1">
@@ -257,7 +271,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapPlus:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="WqS-bi-cul"/>
+                                                    <action selector="tapPlusWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ulC-0m-8FS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -275,7 +289,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapZero:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="DSt-xn-4WZ"/>
+                                                    <action selector="tapZeroWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Iac-wd-vzA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-bH-7Dw">
@@ -287,7 +301,7 @@
                                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapDot:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="EGp-cS-L55"/>
+                                                    <action selector="tapDotWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vUc-EY-fPN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y14-nA-lfZ">
@@ -299,7 +313,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapEquals:" destination="x2X-nJ-4Yo" eventType="touchUpInside" id="fvB-Lg-a2T"/>
+                                                    <action selector="tapEqualsWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IQj-Vn-NWy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -328,12 +342,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="x2X-nJ-4Yo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="114.50892857142857"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
