@@ -44,15 +44,82 @@ class ViewController : UIViewController
     }
     
     @IBAction func tapEquals(_sender: Any) {
-        //show value
-        let resultExpression = calcContent.replacingOccurrences(of: "%", with: "*0.01")
-        let expression = NSExpression(format: resultExpression)
-        let result = expression.expressionValue(with: nil, context: nil) as! Double
+        let validExpression = validInput()
         
-        let resultString:String = String(format: "%f", result)
+        if (validExpression) {
+            let expression = calcContent.replacingOccurrences(of: "%", with: "*0.01")
+            let resultExpression = NSExpression(format: expression + ".00")
+            let result = resultExpression.expressionValue(with: nil, context: nil) as! Double
+            
+            var format:String = "%f"
+            if result.rounded() == result {
+                format = "%.0f"
+            }
+            let resultString:String = String(format: format, result)
+            
+            calcResult.text = resultString
+            calcArea.text = ""
+            calcContent = ""
+        }
+        else {
+            let alert = UIAlertController(title: "Invalid Input",
+                                          message: "Your expression is not true",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Go back", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func validInput() -> Bool {
+        var count = 0
+        var charIndex = [Int]()
         
-        calcResult.text = resultString
+        for char in calcContent {
+            if (specialCharacter(char: char)) {
+                charIndex.append(count)
+            }
+            count += 1
+        }
         
+        var previosIndex:Int = -1
+        
+        for index in charIndex {
+            if (index == 0) {
+                return false
+            }
+            
+            if index == calcContent.count - 1 {
+                return false
+            }
+            
+            if (previosIndex != -1) {
+                if index - previosIndex == 1 {
+                    return false
+                }
+            }
+            
+            previosIndex = index
+        }
+        
+        return true
+    }
+    
+    func specialCharacter(char: Character) -> Bool {
+        if char == "+" {
+            return true
+        }
+        if char == "*" {
+            return true
+        }
+        if char == "/" {
+            return true
+        }
+        if char == "%" {
+            return true
+        }
+        
+        return false
     }
     
     @IBAction func tapOne(_sender: Any) {
