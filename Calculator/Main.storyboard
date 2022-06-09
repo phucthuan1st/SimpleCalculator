@@ -338,7 +338,7 @@
                     </view>
                     <connections>
                         <outlet property="calcArea" destination="O2c-Ho-9Iv" id="zpu-lu-4Hp"/>
-                        <outlet property="calcResult" destination="7ZC-Xy-eIL" id="BJb-AT-wte"/>
+                        <outlet property="resultArea" destination="7ZC-Xy-eIL" id="BJb-AT-wte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
