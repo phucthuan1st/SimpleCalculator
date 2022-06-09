@@ -33,11 +33,17 @@ class CalculatorTests: XCTestCase {
     }
     
     func testReWriteExpression() {
-        XCTAssertEqual("9/(90*0.01)+5/(50*0.01)", Expression.reWriteExpression(expression: "9/90%+5/50%"))
+        XCTAssertEqual("1.0*(9/(90*0.01)+5/(50*0.01))", Expression.reWriteExpression(expression: "9/90%+5/50%"))
     }
     
     func testExpressionValue() {
-        XCTAssertEqual(20, Expression.getExpressionValue(expression: "9/90%+5/50%"))
+        let (check1, value1) = Expression.getExpressionValue(expression: "9/90%+5/50%")
+        XCTAssertTrue(check1)
+        XCTAssertEqual(value1, 20.0)
+        
+        let (check2, value2) = Expression.getExpressionValue(expression: "-9+++3")
+        XCTAssertFalse(check2)
+        XCTAssertEqual(value2, 0.0)
     }
 
 }
